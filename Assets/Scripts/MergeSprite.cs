@@ -48,7 +48,7 @@ public class MergeSprite : MonoBehaviour {
 
 	}
 
-	public void BuildSprite()
+	public void BuildSpritePack()
 	{
 
 		var texture = CreateTexture2dAndInfo ();
@@ -56,7 +56,7 @@ public class MergeSprite : MonoBehaviour {
 
 
 		var span = DateTime.Now.Subtract (new DateTime(1970, 1, 1, 0 ,0 ,0));
-		var path = "/Resources/MergeSprites/" + span.TotalSeconds.ToString ("0");
+		var path = "/Resources/SpritePack/" + span.TotalSeconds.ToString ("0");
 		SaveSpriteAndInfo (sprite, path);
 
 		UnityEngine.Object.Destroy (texture);
